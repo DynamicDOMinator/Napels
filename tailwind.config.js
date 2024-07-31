@@ -1,6 +1,6 @@
 
 module.exports = {
-  content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/js/**/*.js"],
+  content: ["./src/**/*.{html,js}", "./tw-elements/js/**/*.js"],
   theme: {
     extend: {
       colors: {
