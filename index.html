@@ -1,0 +1,1054 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--CSS-->
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="relative">
+
+
+
+<!----scroll top button ---->
+
+<div class="scroll-top hidden fixed bottom-6 z-10 right-3 dark:bg-red-600">
+    <button class="Btn" style="width: 45px;
+  height: 45px;
+  background: linear-gradient(#16161688, #11111193);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512" style="fill: white;">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+    </button>
+    <style>
+        @keyframes slide-in-bottom {
+            0% {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .scroll-top {
+            animation: hu__hu__ infinite 2s ease-in-out
+        }
+
+        @keyframes hu__hu__ {
+            50% {
+                transform: translateY(30px)
+            }
+        }
+    </style>
+
+</div>
+
+
+
+
+
+
+
+<!-- Main navigation container -->
+<nav class="flex top-0 w-full fixed z-40 flex-nowrap bg-zinc-50 lg:h-20 pt-5 text-neutral-500 shadow-dark-mild lg:pt-0"
+    data-twe-navbar-ref>
+    <div class="flex w-full  flex-wrap items-center px-3">
+        <div class="ms-2 pb-2 lg:py-5">
+            <a class="text-3xl font-bold bg-gradient-to-r from-brad-from  to-brand-to text-transparent bg-clip-text" href="#">Naples</a>
+        </div>
+        <!-- Hamburger button for mobile view -->
+        <button
+            class="block border-0 bg-transparent px-2 absolute top-5 right-1 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent3"
+            aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Hamburger icon -->
+            <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                        clip-rule="evenodd" />
+                </svg>
+            </span>
+        </button>
+
+        <!-- Collapsible navbar container -->
+        <div class="flex-grow hidden basis-[100%] items-center lg:!flex lg:basis-auto"
+            id="navbarSupportedContent3" data-twe-collapse-item>
+            
+            <div class=" pl-5 flex flex-col py-5 gap-5 lg:ml-16 lg:flex-row" data-twe-navbar-nav-ref>
+                <!-- Home link -->
+                <div class="lg:mb-0" data-twe-nav-item-ref>
+                    <a class=" navbtn Dongle text-xl font-semibold text-black  lg:px-5 lg:py-3    hover:bg-gray-300 hover:shadow-primary-2  focus:outline-none focus:ring-0   motion-reduce:transition-none" href="#"
+                        data-twe-nav-link-ref>Home</a>
+                </div>
+                <!----Menu link---->
+                <div class="lg:mb-0 " data-twe-nav-item-ref>
+                    <div class="relative" data-twe-dropdown-ref>
+                        <button
+                            class="flex items-center rounded  navbtn Dongle text-xl font-semibold text-black pr-3 md:pr-3 lg:px-5   leading-normal  transition duration-150 ease-in-out hover:bg-gray-300 hover:shadow-primary-2  focus:outline-none focus:ring-0   motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                            type="button" id="dropdownMenuButton1" data-twe-dropdown-toggle-ref aria-expanded="false" data-twe-ripple-init
+                            data-twe-ripple-color="light">
+                            Menu
+                            <span class="ms-2 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                            aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                            <li>
+                                <a class="block w-full whitespace-nowrap spy-1 bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                    href="#" data-twe-dropdown-item-ref>🍕 Pizza</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap spy-2 bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                    href="#" data-twe-dropdown-item-ref>🍔 Burger</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap spy-3 bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                    href="#" data-twe-dropdown-item-ref>🍝 Pasta</a>
+                            </li>
+                            <li>
+                            <a class="block w-full whitespace-nowrap spy-4 bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                href="#" data-twe-dropdown-item-ref>🍜 Noodels</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap spy-5 bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                    href="#" data-twe-dropdown-item-ref>🥪 Sandwiches</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap spy-6 bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                    href="#" data-twe-dropdown-item-ref>🥗 salad</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Servises link -->
+                <div class="lg:mb-0" data-twe-nav-item-ref>
+                    <a class="p-0 spy-7 navbtn Dongle text-xl font-semibold text-black navbtn   lg:px-5 lg:py-3  hover:bg-gray-300 hover:shadow-primary-2  focus:outline-none focus:ring-0   motion-reduce:transition-none"
+                        href="#" data-twe-nav-link-ref>Services</a>
+                </div>
+                <!-- Contact us link -->
+                <div class="lg:mb-0" data-twe-nav-item-ref>
+                    <a class=" navbtn spy-8 Dongle Dongle text-xl font-semibold text-black navbtn  lg:px-5 lg:py-3  hover:bg-gray-300 hover:shadow-primary-2  focus:outline-none focus:ring-0   motion-reduce:transition-none"
+                        href="#" data-twe-nav-link-ref>Contact us</a>
+                </div>
+            </div>
+            <div class="flex w-80 py-5 items-center lg:absolute right-2">
+                <input type="search"
+                    class="relative search-input block w-[1px] min-w-0 flex-auto rounded-xl border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none motion-reduce:transition-none"
+                    placeholder="Search something..." aria-label="Search" aria-describedby="button-addon2" />
+            
+                <!--Search icon-->
+                <span
+                    class="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 [&>svg]:w-5"
+                    id="basic-addon2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+
+</nav>
+
+<!--first section start-->
+
+<!--background img with the content of the first section-->
+
+
+<div class="h-[238px] mt-16 md:h-[520px]  lg:h-[880px] bg-[url('./imges/image.png')] bg-no-repeat bg-cover md:bg-fixed bg-center">
+    <div class="flex flex-col justify-center items-center h-full">
+    <h1 class="text-white font-Dongle w-[265px] md:w-[430px] lg:w-[810px] text-center lg:text-9xl text-4xl md:text-7xl font-bold">The fastest delivery in your city</h1>
+    <p class="text-white text-base  font-Dongle md:text-3xl lg:text-5xl text-center w-[230px] md:w-[400px] lg:w-[710px]">Visit our restaurant to taste our italian cuisine or simply order it from our website.</p>
+    <button class="px-8 py-1 mt-10 text-xs md:text-2xl border solid rounded-2xl font-Dongle text-white lg:text-5xl">Order now</button>
+    </div>
+</div>
+<!--end of the first section-->
+
+<!--second section-->
+<div class="relative " data-aos="zoom-in">
+    <img class=" mx-auto w-[331px] md:w-[600px] lg:w-[830px]" src="./imges/Welcome to Naples.png" alt="">
+    <div class="absolute left-1/2 transform -translate-x-1/2 top-4 lg:top-10">
+    <h1 class=" text-center font-bold  font text-gray-500 font-Dongle text-4xl md:text-6xl lg:text-8xl">Welcome to Naples</h1>
+    <p class="font-Dongle text-center text-xl md:text-4xl lg:text-5xl w-[306px] md:w-[538px] lg:w-[781px] text-gray-500">We started working in 2007 and in 2012 we were able to open our second branch and now we have several branches all over
+    the country.</p>
+    <img class="mx-auto mt-10 got-spy md:mt-20" src="./imges/Vector 15.png" alt="">
+    </div>
+    
+</div>
+
+<!-------------Menu section ------------>
+<div class="lg:mt-96 md:mt-72 mt-52 flex items-start " data-aos="fade-up">
+<div class="flex-none cursor-pointer cart"><img class="lg:w-[160px] lg:h-[100px] md:w-[156px] md:h-[73px] w-[121px] h-[50px]" src="./imges/Group 27.png" alt="" data-name="All"></div>
+<div class="flex-1  flex gap-5 flex-wrap">
+
+
+
+
+<!--Menu Pizza cart-->
+
+
+
+<div class="w-[120px] main-cart  lg:w-[285px] md:w-[210px] py-2 soild border-2 border-red-500 rounded-2xl  flex justify-around  items-center  "data-name="pizza">
+    <img class="lg:w-[110px] w-[42px] h-[37px] md:w-[78px] md:h-[69px]  pr-2 border-r-2 lg:h-[98px]"
+        src="./imges/Pizza.png" alt="">
+    <p class="font-Dongle text-base md:text-2xl  lg:text-4xl">Pizza</p>
+    <img class="w-[15px] cart cursor-pointer h-[15px] md:w-[28px]  md:h-[28px] lg:w-[41px] lg:h-[41px] " src="./imges/plus.png" alt="" data-name="pizza">
+</div>
+
+<!---Menu burger cart--->
+
+<div
+    class="w-[120px] main-cart  lg:w-[285px] md:w-[210px] py-2 soild border-2 border-red-500 rounded-2xl  flex justify-around  items-center " data-name="burger">
+    <img class="lg:w-[110px] w-[42px] h-[37px] md:w-[78px] md:h-[69px]  pr-2 border-r-2 lg:h-[98px]"
+        src="./imges/burger-mu.png" alt="">
+    <p class="font-Dongle text-base md:text-2xl  lg:text-4xl">Burger</p>
+    <img class="w-[15px] h-[15px] md:w-[28px]  md:h-[28px] lg:w-[41px] lg:h-[41px] cart  cursor-pointer  " src="./imges/plus.png" alt="" data-name="burger">
+</div>
+
+<!---Menu Pasta cart-->
+
+
+<div
+    class="w-[120px] main-cart  lg:w-[285px] md:w-[210px] py-2 soild border-2 border-red-500 rounded-2xl  flex justify-around  items-center  " data-name="pasta">
+    <img class="lg:w-[110px] w-[42px] h-[37px] md:w-[78px] md:h-[69px]  pr-2 border-r-2 lg:h-[98px]"
+        src="./imges/Pasta1.png" alt="">
+    <p class="font-Dongle text-base md:text-2xl  lg:text-4xl">Pasta</p>
+    <img class="w-[15px] h-[15px] md:w-[28px]  md:h-[28px] lg:w-[41px] lg:h-[41px] cart  cursor-pointer" src="./imges/plus.png" alt="" data-name="pasta" >
+</div>
+
+<!----Menu noodels cart---->
+
+
+<div
+    class="w-[120px] main-cart  lg:w-[285px] md:w-[210px] py-2 soild border-2 border-red-500 rounded-2xl  flex justify-around  items-center " data-name="noodels">
+    <img class="lg:w-[110px] w-[42px] h-[37px] md:w-[78px] md:h-[69px]  pr-2 border-r-2 lg:h-[98px]"
+        src="./imges/spaghetti.png" alt="">
+    <p class="font-Dongle text-base md:text-2xl  lg:text-4xl">Noodels</p>
+    <img class="w-[15px] h-[15px] md:w-[28px]  md:h-[28px] lg:w-[41px] lg:h-[41px] cart  cursor-pointer" src="./imges/plus.png" alt="" data-name="noodels">
+</div>
+
+<!----menu sandwiches cart--->
+
+
+<div
+    class="w-[120px] main-cart  lg:w-[285px] md:w-[210px] py-2 soild border-2 border-red-500 rounded-2xl  flex justify-around  items-center  "data-name="sandwich" >
+    <img class="lg:w-[110px] w-[42px] h-[37px] md:w-[78px] md:h-[69px]  pr-2 border-r-2 lg:h-[98px]"
+        src="./imges/sandwitch.png" alt="">
+    <p class="font-Dongle text-base md:text-2xl  lg:text-4xl">Sandwich</p>
+    <img class="w-[15px] h-[15px] md:w-[28px]  md:h-[28px] lg:w-[41px] lg:h-[41px] cart  cursor-pointer" src="./imges/plus.png" alt="" data-name="sandwich">
+</div>
+
+
+<!----Menu salad cart---->
+
+<div
+    class="w-[120px] main-cart  lg:w-[285px] md:w-[210px] py-2 soild border-2 border-red-500 rounded-2xl  flex justify-around  items-center  "data-name="salad" >
+    <img class="lg:w-[110px] w-[42px] h-[37px] md:w-[78px] md:h-[69px]  pr-2 border-r-2 lg:h-[98px]"
+        src="./imges/salad.png" alt="">
+    <p class="font-Dongle text-base md:text-2xl  lg:text-4xl">Salad</p>
+    <img class="w-[15px] h-[15px] md:w-[28px]  md:h-[28px] lg:w-[41px] lg:h-[41px] cart  cursor-pointer" src="./imges/plus.png" alt="" data-name="salad">
+</div>
+
+
+
+                    </div>
+                            </div>
+
+
+
+<!----menu items--->
+
+<div class="mt-24 item-menu cart-item "  data-name="pizza" >
+<p class="lg:text-5xl text-3xl md:text-5xl font-bold lg:pl-24 md:pl-16 pl-10 font-Dongle got-spy-1">Popular Pizzas of Naples</p>
+
+<!-----Pizza menu first-item--->
+<div class="relative pt-2  mt-24">
+<div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+    <div class="w-[50%] pl-7 md:pl-16 md:w-[50%]  text-center"><p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base  text-white">Pepperoni pizza</p></div>
+    <div class="w-[50%] text-end "><p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$55,00</p></div>
+    
+    
+</div>
+<div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+    <div class="">
+    <ul class="">
+        <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Pepperoni sausage</li>
+        <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Cheese pizza</li>
+        <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Red bell pepper</li>
+        <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Ketchup</li>
+    </ul> 
+</div>
+    <div class="">
+        <ul>
+            <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Thyme</li>
+            <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Tomato</li>
+        </ul>
+    </div>
+</div>
+<img class=" absolute  top-0 w-[29%]   h-[90%]" src="./imges/pizza-1.png" alt="">
+</div>
+
+</div>
+
+
+<!-----Pizza menu second item--->
+
+<div class="mt-14 item-menu cart-item "  data-name="pizza" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle    font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Vegetables pizza</p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$50,00</p>
+            </div>
+
+
+        </div>
+        <div class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Mushroom</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Black olive</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Peas</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Thyme</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Tomato</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 right-3 w-[29%] h-[90%]" src="./imges/pizza-3.png" alt="">
+    </div>
+
+</div>
+
+
+<!-----Pizza menu third item--->
+
+
+<div class="mt-14 item-menu cart-item"  data-name="pizza" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-10 md:pl-16  text-center">
+                <p class="font-Dongle  font-bold lg:text-6xl md:text-4xl text-base text-white">
+                Margherita pizza</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$49,87</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Basil</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Cheese pizza</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Black pepper</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Garlic</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Thyme</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Tomato</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 w-[29%] h-[90%]" src="./imges/pizza-3.png" alt="">
+    </div>
+
+</div>
+
+
+<!------------Burger menu items------------>
+
+<!-----Burger menu First item--->
+
+<div class="mt-24 item-menu cart-item"  data-name="burger" >
+    <p class="lg:text-5xl text-3xl md:text-5xl font-bold lg:pl-24 md:pl-16 pl-10 font-Dongle got-spy-2">Popular Burgers of Naples
+    </p>
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Classic Cheeseburger</p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$48,53</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Beef patty</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">cheddar cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">lettuce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">tomato</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">onions</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">ketchup</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">pickles</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 right-3 w-[29%] h-full" src="./imges/burger1.png" alt="">
+    </div>
+
+</div>
+
+<!-----Burger menu second-item--->
+
+
+<div class="mt-14 item-menu cart-item" data-name="burger" >
+    <div class="relative pt-2 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-10 md:pl-16 lg:pl-20  md:w-[50%] lg:w-[60%]  text-center">
+                <p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base text-white">Bacon Cheeseburger</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$58,00</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Beef patty</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">crispy bacon</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">cheddar cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">lettuce</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">tomato</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">pickles</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">onions</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">BBQ</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0  w-[29%]   h-full" src="./imges/burger2(1)(1).png" alt="">
+    </div>
+
+</div>
+
+
+
+
+<!-----Burger menu third item--->
+
+
+<div class="mt-14 item-menu cart-item" data-name="burger" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle  font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Southwestern Burger</p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$53,99</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Beef patty</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">pepper jack cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">guacamole</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">pico de gallo</li>
+
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">lettuce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">chipotle mayo</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-3 right-3 w-[29%] h-full" src="./imges/burger-3(1)(1).png" alt="">
+    </div>
+
+</div>
+
+<!-----pasta menu first-item--->
+
+<div class="mt-24 item-menu cart-item" data-name="pasta" >
+    <p class="lg:text-5xl text-3xl  md:text-5xl font-bold lg:pl-24 md:pl-16 pl-10 font-Dongle got-spy-3">Popular pasta of Naples
+    </p>
+
+    <div class="relative pt-2 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[81%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-7  md:pl-20 md:w-[50%] lg:w-[60%] lg:pl-24 text-center">
+                <p class="font-Dongle font-bold lg:text-6xl md:text-4xl text-base text-white">Spaghetti Bolognese
+</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$21,50</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Spaghetti</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">rich beef</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">garlic</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">onions</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Parmesan cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">carrots</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">celery</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 w-[29%]   h-[90%]" src="./imges/pasta-1.png" alt="">
+    </div>
+
+</div>
+
+
+<!-----Pasta  menu second item--->
+
+<div class="mt-14 item-menu cart-item"  data-name="pasta" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Fettuccine Alfredo
+</p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$23,55</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Fettuccine</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">creamy Alfredo sauce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">heavy cream</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Parmesan cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">black pepper</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 right-3 w-[29%] h-[90%]" src="./imges/pasta-2.png" alt="">
+    </div>
+
+</div>
+
+
+<!-----Pasta menu third item--->
+
+
+<div class="mt-20 item-menu cart-item"  data-name="pasta" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-10 md:pl-16 lg:pl-28 text-center">
+                <p class="font-Dongle  font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Penne Arrabbiata</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$20,87</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Penne</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">spicy tomato sauce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">garlic</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">chili flakes</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">olive oil</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">parsley</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 w-[29%] h-[90%]" src="./imges/pasta-3.png" alt="">
+    </div>
+
+</div>
+
+
+<!------noodels Menu items------->
+
+
+<!------noodles first item-------->
+<div class="mt-24 item-menu cart-item"  data-name="noodels" >
+    <p class="lg:text-5xl text-3xl md:text-5xl font-bold lg:pl-24 md:pl-16 pl-10 font-Dongle got-spy-4">Popular Noodels of Naples
+    </p>
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle  font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Pad Thai
+                </p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$12,99</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Rice noodles</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">shrimp</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">bean</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">green onions</li>
+                    
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">sprouts</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">peanuts</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">tamarind sauce</li>
+
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-3 right-3 w-[29%] h-[90%]" src="./imges/noodels-1.png" alt="">
+    </div>
+
+</div>
+
+<!------noodels second item----->
+
+<div class="mt-20 item-menu cart-item" data-name="noodels" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-10 md:pl-16 lg:pl-28 text-center">
+                <p class="font-Dongle font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Beef Lo Mein</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$13,99</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Egg noodles</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">beef slices</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">mixed vegetables</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">soy sauce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">sesame oil</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 w-[29%] h-[90%]" src="./imges/noodels-2.png" alt="">
+    </div>
+
+</div>
+
+<!------noodles third item-------->
+<div class="mt-14 item-menu cart-item" data-name="noodels" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Chicken Chow Mein
+                </p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$11,99</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Egg noodles</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">chicken</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">mixed vegetables</li>
+
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">soy sauce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">garlic</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-3 right-3 w-[29%] h-[90%]" src="./imges/noodels-3.png" alt="">
+    </div>
+
+</div>
+
+
+
+<!------Sandwiches Menu items-------->
+
+
+<!-----first sandwich item----->
+<div class="mt-24 item-menu cart-item" data-name="sandwich" >
+    <p class="lg:text-5xl text-3xl md:text-5xl font-bold lg:pl-24 md:pl-16 pl-10 font-Dongle got-spy-5">Popular Sandwiches of Naples
+    </p>
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[60%] md:w-[60%] lg:w-[80%] pl-10 md:pl-16 lg:pl-28 text-center">
+                <p class="font-Dongle font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Grilled Chicken Sandwich</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$8,99</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Grilled chicken breast</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">tomato</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">mixed vegetables</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">honey mustard sauce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">sautéed onions</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-3 w-[27%] h-[90%]" src="./imges/sandwich1.png" alt="">
+    </div>
+
+</div>
+
+
+
+
+
+<!----second sandwitch item----->
+
+
+<div class="mt-14 item-menu cart-item" data-name="sandwich" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content mt-10 items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Caprese Sandwich
+                </p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$8,49</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Fresh mozzarella</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">tomatoes</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">basil leaves</li>
+
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">balsamic glaze</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">ciabatta bread</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute top-9 md:top-8 lg:top-4 right-3 w-[25%] h-[80%]" src="./imges/sandwich3.png" alt="">
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-----third sandwich item----->
+<div class="mt-24 item-menu cart-item" data-name="sandwich" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] md:w-[60%] pl-10 md:pl-16 lg:pl-28 text-center">
+                <p class="font-Dongle font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Philly Cheesesteak</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$9,99</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Thinly sliced beefsteak</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">sautéed onions</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">bell peppers</li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">melted provolone cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">hoagie roll</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 w-[27%] h-[90%]" src="./imges/sandwich2.png" alt="">
+    </div>
+
+</div>
+
+
+<!----Salad Menu items----->
+
+
+<!-- first sald item -->
+
+<div class="mt-14 item-menu cart-item" data-name="salad" >
+    <p class="lg:text-5xl text-3xl md:text-5xl font-bold lg:pl-24 md:pl-16 pl-10 font-Dongle got-spy-6">Popular Salads of Naples
+    </p>
+    <div class="relative pt-6 mt-24">
+        <div class="item-content mt-10 items-center text-white mr-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[50%] pl-2 lg:pl-10  text-start">
+                <p class="font-Dongle   font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Caesar Salad
+                </p>
+            </div>
+            <div class="w-[50%] text-start ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$7,99</p>
+            </div>
+
+
+        </div>
+        <div
+            class="flex pl-11 lg:pl-20 mt-8 items-start  gap-7  md:gap-14  lg:gap-28   mr-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Crisp romaine lettuce</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">grated Parmesan cheese</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">croutons</li>
+
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Caesar dressing</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">grilled chicken</li>
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute top-9 md:top-8 lg:top-12 right-3 w-[25%] h-[80%]" src="./imges/salad1.png" alt="">
+    </div>
+
+</div>
+
+
+<!-- second salad item -->
+
+<div class="mt-20 item-menu cart-item " data-name="salad" >
+    <div class="relative pt-6 mt-24">
+        <div class="item-content  items-center text-white ml-auto flex lg:w-[85%] md:w-[80%] w-[88%] bg-gray-500">
+            <div class="w-[45%] md:w-[50%] pl-10 md:pl-16 lg:pl-28 text-center">
+                <p class="font-Dongle font-bold lg:text-6xl md:text-4xl text-base text-white">
+                    Greek Salad</p>
+            </div>
+            <div class="w-[50%] text-end ">
+                <p class="font-Dongle pr-3 lg:text-5xl md:text-3xl text-sm text-white">$8,49</p>
+            </div>
+
+
+        </div>
+        <div class="flex mt-8 items-start  gap-7  md:gap-14  lg:gap-28   ml-auto lg:w-[62%] md:w-[57%] w-[65%]">
+            <div class="">
+                <ul class="">
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle ">Fresh mixed greens</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">cherry tomatoes</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">cucumbers</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">feta cheese</li>
+
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">red onions</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">Kalamata olives</li>
+                    <li class="list-disc text-base md:text-3xl lg:text-5xl font-Dongle">tangy Greek vinaigrett</li>
+
+                </ul>
+            </div>
+        </div>
+        <img class=" absolute  top-0 w-[27%] h-[90%]" src="./imges/salad2.png" alt="">
+    </div>
+
+</div>
+
+<!-- end of menu items  -->
+
+<div class="mt-24 got-spy-7"><img class="lg:w-[545px] md:w-[416px] w-[191px]" src="./imges/Vector 15.png" alt=""></div>
+
+
+<!-- more items menu carts -->
+
+<div class="mt-28 px-5  flex flex-col md:flex-row justify-center items-center  gap-10 overflow-hidden box-border ">
+    <div class=" relative"><img class="lg:w-[438px] md:w-[247px] w-[248]" src="./imges/Rectangle 13.png" alt="" >
+    <p class="font-Dongle absolute bottom-24 lg:bottom-32  md:bottom-20 left-3 lg:text-7xl md:text-5xl text-white  text-4xl ">Appetizer</p>
+    </div>
+    <div class="relative"><img class="lg:w-[438px] md:w-[247px] w-[248]" src="./imges/Rectangle 14.png" alt="" >
+        <p class="font-Dongle absolute bottom-24 lg:bottom-32 md:bottom-20 left-3 lg:text-7xl md:text-5xl text-white  text-4xl ">Dessert</p>
+    </div>
+    <div class=" relative"><img class="lg:w-[438px] md:w-[247px] w-[248]" src="./imges/Rectangle 15.png" alt="" >
+        <p class="font-Dongle absolute bottom-24 lg:bottom-32 md:bottom-20 left-3 lg:text-7xl md:text-5xl text-white  text-4xl ">Beverage</p>
+    </div>
+</div>
+
+
+<!-- contact form  -->
+
+<div class="form-container max-w-full relative mt-28 got-spy-8 overflow-hidden box-border" data-aos="zoom-in"   >
+    <div class="text-center mx-auto relative md:w-[60%] py-5 w-[80%] rounded-xl h-[100%] bg-gray-100 overflow-hidden box-border">
+        <p class="font-Dongle font-bold md:text-7xl text-3xl pt-5 overflow-hidden box-border ">Share your opinion <br> with us</p>
+        <div class="lg:flex mt-7 px-9 gap-3 overflow-hidden box-border">
+            <div class="flex lg:px-3 flex-col gap-4 lg:w-[50%] overflow-hidden box-border">
+                <input class="py-6 px-2 inp rounded-xl focus:outline-none overflow-hidden box-border" type="text" placeholder="Your name">
+                <input class="py-6 px-2 inp rounded-xl focus:outline-none overflow-hidden box-border" type="text" placeholder="Your email">
+            </div>
+            <div class="mt-5 lg:mt-0 lg:w-[50%] lg:px-3 overflow-hidden box-border ">
+                <textarea class="w-full inp h-[180px] lg:h-full px-2 py-2 focus:outline-none rounded-xl overflow-hidden box-border"
+                    placeholder="Write something"></textarea>
+            </div>
+        </div>
+        <div class="mt-5 mb-2 lg:mt-10 overflow-hidden box-border">
+            <button id="submitButton"
+                class="border-red-500 overflow-hidden box-border text-red-700 border-solid border-2 text-2xl md:text-3xl rounded-3xl font-Dongle font-bold px-12 py-2">Send</button>
+        </div>
+    </div>
+</div>
+
+<!-- footer start  -->
+
+<footer class="mt-24 py-14 bg-gray-50 overflow-hidden box-border  ">
+<div class="footer-container lg:gap-24 md:gap-10  md:flex w-[80%] mx-auto relative overflow-hidden box-border ">
+    <div><p class="font-bold lg:text-5xl font-Dongle md:text-3xl text-2xl">Contact</p>
+    <ul>
+        <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">📧 Naples@email.com</li>
+        <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg " >📞 573 - 8304 - 246</li>
+    </ul>
+    </div>
+    <div><p class="font-bold lg:text-5xl font-Dongle md:text-3xl text-2xl">Info</p>
+        <ul>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">About us</li>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Our stores</li>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Food recipes</li>
+            <li  class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Our chefs</li>
+        </ul>
+    </div>
+    <div><p class="font-bold lg:text-5xl font-Dongle md:text-3xl text-2xl">Help</p>
+        <ul>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Find a tasting</li>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Take an order</li>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Privacy policy</li>
+            <li class="font-Dongle text-gray-600 lg:text-4xl md:text-2xl text-lg ">Terms and conditions</li>
+        </ul>
+    </div>
+    <div class=" md:ml-auto mt-8 md:mt-0 ">
+        <a class="md:text-3xl text-xl font-bold bg-gradient-to-r from-brad-from  to-brand-to text-transparent bg-clip-text"
+            href="#">Naples</a><br>
+            <i class="fa-brands fa-instagram md:pl-2"></i>
+            <i class="fa-brands fa-twitter pl-2"></i>
+            <i class="fa-brands fa-facebook pl-2"></i>
+    </div>
+</div>
+
+</footer>
+
+
+
+
+
+
+<!-- sweetalert link  -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- link tw-elements -->
+<script type="text/javascript" src="../node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
+<script src="./main.js"></script>
+</body>
+
+</html
